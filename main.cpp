@@ -153,6 +153,11 @@ int main()
         {
            run.displayLeagueMenu(head);
         }
+
+        else if (mainchoice != "2")//1 will hit the last if, so we just need to make sure input isn't 2 to do error message
+        {
+            cout << "Invalid input" << endl;
+        }
     }
 
     }
