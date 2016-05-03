@@ -6,6 +6,7 @@ The following code gives the skeleton to be able to construct your own Barclay's
 
 How to Run:
 Everything in the zip file should be all you need. Just follow the instructions printed in the Menus and you should be golden.
+The project now includes a makefile. Access the project directory from command line, then type 'make', then './a.out' to compile and run.
 
 Dependencies:
 None, besides the hand typed BPL Player data file, all libraries that are used are in the standard C++ 11.
