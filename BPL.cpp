@@ -1112,21 +1112,26 @@ string BPL::teamBuildingMenu(struct player* head,string teamName,int teamnum)
             {
                 teamAddPlayers(head,team1);
             }
-            if(buildingChoice=="2")
+            else if(buildingChoice=="2")
             {
                 teamRemovePlayers(head,team1);
             }
-            if(buildingChoice=="3")
+            else if(buildingChoice=="3")
             {
                 printRoster(team1);
             }
-            if(buildingChoice=="4")
+            else if(buildingChoice=="4")
             {
                 playerMarketMenu(head);
             }
+            else if (buildingChoice != "5")
+            {
+                cout << "Invalid input" << endl;
+            }
+
         }
     }
-    if(teamnum==2)
+    else if(teamnum==2)
     {
         team* team2=new team;
         team2->teamName=teamName;
@@ -1143,21 +1148,25 @@ string BPL::teamBuildingMenu(struct player* head,string teamName,int teamnum)
             {
                 teamAddPlayers(head,team2);
             }
-            if(buildingChoice=="2")
+            else if(buildingChoice=="2")
             {
                 teamRemovePlayers(head,team2);
             }
-            if(buildingChoice=="3")
+            else if(buildingChoice=="3")
             {
                 printRoster(team2);
             }
-            if(buildingChoice=="4")
+            else if(buildingChoice=="4")
             {
                 playerMarketMenu(head);
             }
+            else if (buildingChoice != "5")
+            {
+                cout << "Invalid input" << endl;
+            }
         }
     }
-    if(teamnum==3)
+    else if(teamnum==3)
     {
         team* team3=new team;
         team3->teamName=teamName;
@@ -1174,21 +1183,25 @@ string BPL::teamBuildingMenu(struct player* head,string teamName,int teamnum)
             {
                 teamAddPlayers(head,team3);
             }
-            if(buildingChoice=="2")
+            else if(buildingChoice=="2")
             {
                 teamRemovePlayers(head,team3);
             }
-            if(buildingChoice=="3")
+            else if(buildingChoice=="3")
             {
                 printRoster(team3);
             }
-            if(buildingChoice=="4")
+            else if(buildingChoice=="4")
             {
                 playerMarketMenu(head);
             }
+            else if (buildingChoice != "5")
+            {
+                cout << "Invalid input" << endl;
+            }
         }
     }
-    if(teamnum==4)
+    else if(teamnum==4)
     {
         team* team4=new team;
         team4->teamName=teamName;
@@ -1205,21 +1218,25 @@ string BPL::teamBuildingMenu(struct player* head,string teamName,int teamnum)
             {
                 teamAddPlayers(head,team4);
             }
-            if(buildingChoice=="2")
+            else if(buildingChoice=="2")
             {
                 teamRemovePlayers(head,team4);
             }
-            if(buildingChoice=="3")
+            else if(buildingChoice=="3")
             {
                 printRoster(team4);
             }
-            if(buildingChoice=="4")
+            else if(buildingChoice=="4")
             {
                 playerMarketMenu(head);
             }
+            else if (buildingChoice != "5")
+            {
+                cout << "Invalid input" << endl;
+            }
         }
     }
-    if(teamnum==5)
+    else if(teamnum==5)
     {
         team* team5=new team;
         team5->teamName=teamName;
@@ -1236,22 +1253,26 @@ string BPL::teamBuildingMenu(struct player* head,string teamName,int teamnum)
             {
                 teamAddPlayers(head,team5);
             }
-            if(buildingChoice=="2")
+            else if(buildingChoice=="2")
             {
                 teamRemovePlayers(head,team5);
             }
-            if(buildingChoice=="3")
+            else if(buildingChoice=="3")
             {
                 printRoster(team5);
             }
-            if(buildingChoice=="4")
+            else if(buildingChoice=="4")
             {
                 playerMarketMenu(head);
+            }
+            else if (buildingChoice != "5")
+            {
+                cout << "Invalid input" << endl;
             }
         }
     }
 
-    if(teamnum>5)
+    else if(teamnum>5)
     {
         cout<<"TOO MANY TEAMS CREATED"<<endl;
         buildingChoice="7";
@@ -1284,34 +1305,39 @@ string BPL::displayLeagueMenu(struct player* head)
 
         }
 
-        if(leaguechoice=="2")
+        else if(leaguechoice=="2")
         {
             linkedListBubbleSortgoals(head);
         }
 
-        if(leaguechoice=="3")
+        else if(leaguechoice=="3")
         {
             linkedListBubbleSortyellows(head);
         }
 
-        if(leaguechoice=="4")
+        else if(leaguechoice=="4")
         {
             linkedListBubbleSortreds(head);
         }
 
-        if(leaguechoice=="5")
+        else if(leaguechoice=="5")
         {
             linkedListBubbleSortplayed(head);
         }
 
-        if(leaguechoice=="6")
+        else if(leaguechoice=="6")
         {
             playerMarketMenu(head);
         }
 
-        if(leaguechoice=="7")
+        else if(leaguechoice=="7")
         {
             break;
+        }
+
+        else
+        {
+            cout << "Invalid input" << endl;
         }
 
     }
@@ -1336,17 +1362,21 @@ string BPL::playerMarketMenu(struct player* head)
             searchPremTeam(head);
         }
 
-        if(playermmenu=="2")
+        else if(playermmenu=="2")
         {
             searchInterTeam(head);
         }
-        if(playermmenu=="3")
+        else if(playermmenu=="3")
         {
             searchPos(head);
         }
-        if(playermmenu=="4")
+        else if(playermmenu=="4")
         {
             searchName(head);
+        }
+        else if (playermmenu != "5")
+        {
+            cout << "Invalid input" << endl;
         }
     }
     return playermmenu;
